@@ -1,0 +1,87 @@
+.navBarCon{
+    width: 100%;
+    height: 65px;
+    background-color: var(--navbarcolor);
+    display: flex;
+}
+.logoImg{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+.navBarCon h1{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: var(--textcolor1);
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.navBarConButtonDiv{
+    margin-left: auto;
+    margin-right: 20px;
+    max-width: 180px;;
+    width: 30%;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0px;
+    border-radius: 7px;
+    background-color: var(--complimentcolor);
+    transition: all 0.5s ease-out;
+    margin-top: 7px;
+    z-index: 3;
+}
+.userDisplayNameDropdown{
+    width: 100%;
+    height: 25%;
+    font-size: 1rem;
+    border: none;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+}
+.navBarConButtonDivButton{
+    width: 100%;
+    height: 25%;
+    font-size: 1rem;
+    background-color: var(--complimentcolor);
+    border: none;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+
+}
+.dropDownSvg{
+    min-width:50px ;
+    min-height: 50px;
+    fill: white;
+}
+
+.navBarConButtonDivButton:hover{
+    background-color: var(--complimenthighlight);
+}
+.navBarConButtonDivButtonLogout{
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    background-color: tomato;
+    border: none;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+}
+.navBarConButtonDivButtonLogout:hover{
+    background-color: rgba(255, 99, 71, 0.703);
+}
+

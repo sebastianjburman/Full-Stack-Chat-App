@@ -1,0 +1,43 @@
+.joinedRoomsCon{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.roomYouHaveJoinedH1{
+    color: var(--textcolor1);
+    font-family: sans-serif;
+    width: 100%;
+    text-align: center;
+    font-size: 1.9rem;
+    margin-top: 30px;
+}
+.joinedRoomsCon h2{
+    width: 60%;
+    background-color: var(--complimentcolor);
+    height: 60px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--textcolor2);
+    font-family: sans-serif;
+    padding: 6px;
+}
+
+/*Shrink text when width get smaller*/
+@media only screen and (max-width: 775px) {
+    .roomYouHaveJoinedH1{
+        font-size: 1.4rem;
+    }
+  }
+
+  /*Adjust page for mobile view*/
+@media only screen and (max-width: 700px) {
+    .joinedRoomsCon{
+        width: 100%;
+    }    
+  }

@@ -1,0 +1,22 @@
+.bottomNavBarCon{
+    height: 60px;
+    width: 100%;
+    background-color: var(--navbarcolor);
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottomNavBarCon button{
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+
+/*Get rid of bottom nav bar when not in mobile*/
+@media only screen and (min-width: 700px) {
+    .bottomNavBarCon{
+       display: none;
+    }
+  }

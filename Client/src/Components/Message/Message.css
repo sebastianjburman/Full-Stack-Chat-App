@@ -1,0 +1,47 @@
+.messageUser{
+    width: 70%;
+    height: fit-content;
+    background-color: var(--complimentcolor);
+    font-size: 1.5rem;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+    color: var(--textcolor2);
+    font-weight: bold;
+    padding: 3px;
+}
+.messageOther{
+    width: 70%;
+    height: fit-content;
+    background-color: var(--textcolor2);
+    font-size: 1.5rem;
+    margin-right: auto;
+    margin: 0px;
+    margin-left: 10px;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+    font-weight: bold;
+    padding: 3px;
+}
+    
+
+.messageUserName{
+    text-align: right;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--textcolor1);
+    font-family: sans-serif;
+}
+
+.messageOtherName{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--textcolor1);
+    font-family: sans-serif;
+}
+

@@ -1,0 +1,14 @@
+.loadMoreBtn{
+    width: 175px;
+    height: 47px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    font-size: 1rem;
+    background-color: var(--complimentcolor);
+    color: var(--textcolor2);
+    border: none;
+    font-weight: bold;
+}
+.loadMoreBtn:hover{
+    opacity: .7;
+}

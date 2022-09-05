@@ -1,0 +1,20 @@
+.privateRouteCon{
+    width: 100%;
+    height: 100%;
+}
+.pagesContainer{
+    width: 100%;
+    /*-65px for topnav and -60px for bottom nav*/
+    height: calc(100% - 65px - 60px);
+    overflow-y: scroll;
+    background-color: var(--bgcolor);
+}
+
+/*Get rid of room for bottom nav bar when not in mobile*/
+@media only screen and (min-width: 700px) {
+    .pagesContainer{
+        width: 100%;
+        /*-65px for topnav */
+        height: calc(100% - 65px);
+    }
+  }

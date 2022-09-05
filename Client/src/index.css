@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --bgcolor: #1b1b1b;
+  --navbarcolor:#262626;
+  --complimentcolor:#33bd91;
+  --complimenthighlight:#4fd6ab;
+  --textcolor1:#ffffff;
+  --textcolor2:#ffffff;
+  --compcolor1: #30302f;
+  --compcolor2: #3a3a39;
+  --compcolor3:#444443;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--textcolor1);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--textcolor1);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--textcolor1);
+}
