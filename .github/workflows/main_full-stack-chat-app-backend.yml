@@ -26,16 +26,16 @@ jobs:
       - name: App Settings Variable Substitution
         uses: microsoft/variable-substitution@v1
         with:
-          files: 'Backend/full-stack-chat-app-backend/appsettings.json'
+          files: 'Backend/appsettings.json'
         env:
           UsersStoreDatabaseSettings.ConnectionString: ${{ secrets.MONGOCONNECTIONSTRING }}
           RoomsStoreDatabaseSettings.ConnectionString: ${{ secrets.MONGOCONNECTIONSTRING }}
           JwtSecret.Secret : ${{ secrets.JWTSECRET }}
       - name: Build with dotnet
-        run: dotnet build ./Backend/full-stack-chat-app-backend --configuration Release
+        run: dotnet build ./Backend --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish ./Backend/full-stack-chat-app-backend -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish ./Backend -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
