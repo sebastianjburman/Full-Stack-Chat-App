@@ -27,6 +27,12 @@
     font-family: sans-serif;
     padding: 6px;
 }
+.loadingRoomsCon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
 /*Shrink text when width get smaller*/
 @media only screen and (max-width: 775px) {

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 //Components
 import Room from "../Room/Room";
 import LoadMore from "../LoadMore/LoadMore"
+import LoadingRoom from "../LoadingRoom/LoadingRoom";
 //Assets
 import { ReactComponent as SearchIcon } from "../../Assets/searchIcon.svg"
 //Api
@@ -51,6 +52,13 @@ function AllRooms(props) {
         <input placeholder="Room Name" value={newRoomInput} onChange={(e) => setNewRoomInput(e.target.value)}></input>
         <button onClick={() => { createRoom() }}>Create</button>
       </div> : null}
+      {props.searchedRoomsLoading?
+      <div className="loadingRoomsCon">
+      <LoadingRoom></LoadingRoom>
+      <LoadingRoom></LoadingRoom>
+      <LoadingRoom></LoadingRoom>
+      <LoadingRoom></LoadingRoom>
+      </div>:null}
       {props.searchedRooms.map((room) => {
         return <Room key={room.id} id={room.id} roomName={room.roomName} roomCreator={room.creatorDisplayName} membersCount={(room.joinedUsersDisplayNames.length) + 1}></Room>
       })}
