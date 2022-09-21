@@ -14,13 +14,15 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import UserRequest from './Api/UserRequest';
 //Theme
 import themeSwitch from './Themes/themeObjects';
+//Assets
+import loadingLogin from "./Assets/loginLoading.svg"
 
 function App() {
   const navigate = useNavigate();
   const [token, setToken] = useState("");
   const [auth, setAuth] = useState(false);
   const [loggedInUserObject, setLoggedInUserObject] = useState({})
-
+  const [loggingInLoading,setLoggingInLoading] = useState(false)
 
   useEffect(() => {
     const themeString = localStorage.getItem("theme")
@@ -35,6 +37,7 @@ function App() {
         themeSwitch("light")
     }
     if (localStorage.getItem('token') !== null) {
+      setLoggingInLoading(true)
       const token = localStorage.getItem("token");
       if (token) {
         const fetchUser = async () => {
@@ -53,6 +56,9 @@ function App() {
           catch {
             localStorage.removeItem("token");
           }
+          setTimeout(() => {
+            setLoggingInLoading(false)
+          }, 100);
         }
         fetchUser()
       }
@@ -63,7 +69,7 @@ function App() {
       <Routes>
         <Route path="/" element={
           <PrivateRoute setToken={setToken} token={token} setAuth={setAuth} auth={auth} setLoggedInUserObject={setLoggedInUserObject} loggedInUserObject={loggedInUserObject}>
-            <HomePage token={token}/>
+            {loggingInLoading?<div className="loadingLoginCon"><img src={loadingLogin}></img></div>:<HomePage token={token} loggingInLoading = {loggingInLoading}/>}
           </PrivateRoute>
         } />
         <Route path="/settings" element={
