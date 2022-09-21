@@ -21,7 +21,7 @@
     fill: var(--textcolor1);
 }
 .searchRoomsInputCon input{
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 400px;
     height: 40px;
     padding: 0px;
