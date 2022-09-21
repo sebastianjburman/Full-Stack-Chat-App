@@ -30,7 +30,7 @@ Builders.Services.AddCors(options =>
                 {
                     policy.AllowAnyHeader()
                         .AllowAnyMethod()
-                        .WithOrigins("https://loquacious-dodol-dd372b.netlify.app")
+                        .WithOrigins("https://tetraroomsjburman.netlify.app")
                         .AllowCredentials();
                 });
             });
