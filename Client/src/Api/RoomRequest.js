@@ -80,7 +80,7 @@ class RoomRequest {
             }
         }
         catch (err) {
-            alert("Error creating room. You can't create more than 10 rooms.")
+            alert("Error creating room. Either this room name is already in use or you have exceeded room limit.")
         }
     }
     static async getRoom(token, roomId) {
