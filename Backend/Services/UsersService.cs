@@ -47,10 +47,16 @@ namespace full_stack_chat_app_backend.Services
 
         public string Authenticate(string username, string password)
         {
-            User foundUser = _users.Find(user => user.Username == username && user.Password == password).FirstOrDefault();
-            if (foundUser != null)
+            User foundUser = _users.Find(user => user.Username == username).FirstOrDefault();
+            if (foundUser != null )
             {
-                return GenerateJwtToken(foundUser);
+                bool verified = BCrypt.Net.BCrypt.Verify(password, foundUser.Password);
+                if(verified){
+                    return GenerateJwtToken(foundUser);
+                }
+                else{
+                    return "User not found";
+                }
             }
             else
             {

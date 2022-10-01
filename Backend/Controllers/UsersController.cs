@@ -4,6 +4,7 @@ using full_stack_chat_app_backend.Models;
 using full_stack_chat_app_backend.Helpers;
 using Newtonsoft.Json;
 
+
 namespace full_stack_chat_app_backend.Controllers
 {
     [Route("api/[controller]")]
@@ -40,6 +41,8 @@ namespace full_stack_chat_app_backend.Controllers
         {
             newUser.Id = IdGenerator.Generate(24);
             if(newUser.validateModel()){
+                string passwordHash = BCrypt.Net.BCrypt.HashPassword(newUser.Password);
+                newUser.Password = passwordHash;
                 usersService.Create(newUser);
                 return CreatedAtAction(nameof(Get),new {id = newUser.Id},User);
             }
