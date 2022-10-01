@@ -34,8 +34,9 @@ namespace full_stack_chat_app_backend.Controllers
             string serializedUser = JsonConvert.SerializeObject(returnedUser);
             return serializedUser;
         }
-
+        /*
         // POST api/<UsersController>
+        
         [HttpPost]
         public ActionResult<User> Post([FromBody] User newUser)
         {
@@ -48,6 +49,7 @@ namespace full_stack_chat_app_backend.Controllers
             }
             return BadRequest();
         }
+        */
         [Authorize]
         // PUT api/<UsersController>/5
         [HttpPut]
