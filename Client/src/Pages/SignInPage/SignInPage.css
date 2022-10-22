@@ -67,6 +67,9 @@
     background-color: var(--complimentcolor);
     color: var(--textcolor2);
     font-weight: bold;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .loginButton:hover{
